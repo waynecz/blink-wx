@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "art-template": "^3.0.3",
+    "axios": "^0.15.3",
     "body-parser": "^1.15.2",
     "colors": "^1.1.2",
     "compression": "^1.6.2",
@@ -20,7 +21,6 @@
   },
   "devDependencies": {
     "autoprefixer": "^6.7.2",
-    "axios": "^0.15.3",
     "babel-core": "^6.22.1",
     "babel-loader": "^6.2.10",
     "babel-plugin-transform-runtime": "^6.22.0",
