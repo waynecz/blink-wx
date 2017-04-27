@@ -20,6 +20,14 @@
                 }
             }
         },
+        computed: {
+            hasBanner () {
+                return this.banners.length > 0
+            },
+            hasPic () {
+                return this.picsLeft.length > 0
+            }
+        },
         created () {
             window.actId = window.location.pathname.substring(1).split('/')[0]
         },
@@ -72,13 +80,17 @@
                  :style="{backgroundImage: `url(${banner.file + '?imageView2/2/w/800/h/3000/q/75'})`}">
 
           </slide>
+          <slide v-if="!hasBanner" class="activity__banner--empty">
+            活动未上传banner
+
+          </slide>
         </carousel>
       </div>
     </header>
 
     <h1 class="activity__title">直播现场</h1>
 
-    <div class="activity__pic-wrapper" layout="row top-justify">
+    <div v-if="hasPic" class="activity__pic-wrapper" layout="row top-justify">
       <div class="activity__pic-column">
         <div v-for="pic in picsLeft" @click="viewImg(pic.file)">
           <progressive-img
@@ -102,6 +114,10 @@
         </div>
       </div>
     </div>
+
+    <h3 class="activity__empty" v-else>
+      当前没有照片
+    </h3>
 
     <div class="activity__pic-view" layout="row center-center" v-if="viewVisible" @click="hideView">
       <progressive-img

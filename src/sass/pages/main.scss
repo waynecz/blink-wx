@@ -7,11 +7,19 @@
         height: 60vh;
         background: url("../assets/dark.png");
     }
-
+    &__empty {
+        margin-top: 10vh;
+        text-align: center;
+        font-size: 13px;
+        color: $d;
+    }
     &__banner {
         padding-bottom: 66.67%;
         background: #42b983;
         background-size: cover;
+        &--empty {
+            padding-top: 40%;
+        }
     }
     &__title {
         position: relative;
