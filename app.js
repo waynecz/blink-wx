@@ -12,6 +12,9 @@ const renderPage   = require('./middleware/renderPage');
 var routes = require('./routes/index');
 
 var app = express();
+if (process.env.NODE_ENV === 'production') {
+    app.use(compression());
+}
 
 // 渲染引擎设置
 template.config('extname', '.html');
