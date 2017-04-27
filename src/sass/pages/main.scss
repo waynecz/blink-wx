@@ -1,0 +1,75 @@
+.activity {
+    width: 100vw;
+    max-width: 800px;
+    margin: 0 auto;
+    &__head {
+        padding: 5vw;
+        height: 60vh;
+        background: url("../assets/dark.png");
+    }
+
+    &__banner {
+        padding-bottom: 66.67%;
+        background: #42b983;
+        background-size: cover;
+    }
+    &__title {
+        position: relative;
+        display: inline-block;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 10vh;
+        text-align: center;
+        font-size: 18px;
+        color: #777;
+
+        line-height: normal;
+        &::after {
+            content: '';
+            width: 15vw;
+            height: 1px;
+            background: $a;
+            position: absolute;
+            top: 50%;
+            margin-left: 10px;
+        }
+        &::before {
+            content: '';
+            width: 15vw;
+            height: 1px;
+            background: $a;
+            position: absolute;
+            top: 50%;
+            margin-left: -10px;
+            transform: translateX(-100%);
+        }
+    }
+    &__pic {
+        width: 100%;
+        margin-bottom: 1vw;
+        &-view {
+            position: fixed;
+            z-index: 10;
+            width: 100vw;
+            left: 0;
+            bottom: 0;
+            top: 0;
+            right: 0;
+            background: rgba(0, 0, 0, .7);
+        }
+        &-big {
+            width: 100%;
+            max-width: 95vw;
+            max-height: 95vh;
+        }
+
+        &-wrapper {
+            margin: 0 auto;
+            margin-top: 5vh;
+            width: 90vw;
+        }
+        &-column {
+            width: 44.5vw;
+        }
+    }
+}

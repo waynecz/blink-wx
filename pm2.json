@@ -1,0 +1,16 @@
+{
+  "apps": [{
+    "name": "blink-wx",
+    "script": "bin/www",
+    "instances": 1,
+    "max_memory_restart": "512M",
+    "autorestart": true,
+    "env": {
+      "NODE_ENV": "production",
+      "MOCK": "no"
+    },
+    "log_date_format": "YYYY-MM-DD HH:mm Z",
+    "error_file": "log/err.log",
+    "out_file": "log/logs.log"
+  }]
+}

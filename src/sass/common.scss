@@ -1,0 +1,13 @@
+// 这里写具体应用的结构样式，类似app的架构
+body {
+    display: block;
+}
+
+.hx {
+    &__empty {
+        margin-top: 100px;
+        text-align: center;
+        font-size: 26px;
+        color: #464c5b;
+    }
+}
